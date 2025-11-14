@@ -14,9 +14,15 @@ public:
     void resized() override;
 
 private:
-    // This reference is provided as a quick way for your editor to
-    // access the processor object that created it.
     AudioPluginAudioProcessor& processorRef;
+
+    // テキストボタンを用意
+    juce::TextButton applyButton;
+
+    using ButtonAttachment = juce::AudioProcessorValueTreeState::ButtonAttachment;
+
+    // ButtonAttachmentのユニークポインタ型のアタッチメントを用意
+    std::unique_ptr<ButtonAttachment> applyAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessorEditor)
 };

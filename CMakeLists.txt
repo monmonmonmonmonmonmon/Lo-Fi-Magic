@@ -33,6 +33,8 @@ set(SourceFiles
         Source/PluginEditor.h
         Source/PluginProcessor.cpp
         Source/PluginProcessor.h
+        Source/Effects_temp.cpp
+        Source/Effects_temp.h
 )
 
 # Change these to your own preferences
